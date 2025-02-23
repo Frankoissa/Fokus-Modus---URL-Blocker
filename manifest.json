@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Fokus Modus",
+  "version": "1.0",
+  "description": "Blockiert ablenkende Websites für einen bestimmten Zeitraum.",
+  "permissions": ["tabs", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
