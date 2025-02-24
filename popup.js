@@ -8,7 +8,6 @@ function createUrlElement(url, duration) {
   const timerSpan = document.createElement("span");
   timerSpan.className = "timer";
 
-
   if (duration === 0) {
     timerSpan.textContent = "Blocked";
     li.appendChild(urlSpan);
@@ -89,11 +88,9 @@ addUrlForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const url = urlInput.value;
 
-
   const hours = hoursInput.value ? parseInt(hoursInput.value) : 0;
   const minutes = minutesInput.value ? parseInt(minutesInput.value) : 0;
   const seconds = secondsInput.value ? parseInt(secondsInput.value) : 0;
-
 
   const hasTimeInput = hours > 0 || minutes > 0 || seconds > 0;
   const duration = hasTimeInput ? hours * 3600 + minutes * 60 + seconds : 0;
@@ -105,6 +102,5 @@ addUrlForm.addEventListener("submit", (event) => {
   minutesInput.value = "0";
   secondsInput.value = "0";
 });
-
 
 renderBlockedUrls();
